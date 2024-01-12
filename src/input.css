@@ -1,3 +1,48 @@
+@import "./css/colorStyle.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap');
+
+@import "./css/card.css";
+@import "./css/footer.css";
+@import "./css/adds.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+  padding: 0 10px;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 50px;
+  }
+}
+@media (min-width: 1024) {
+  .container {
+    width: 100%;
+    padding: 0 60px;
+  }
+}
+@media (min-width: 1230) {
+  .container {
+    width: 100%;
+    padding: 0 70px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+#root{
+    flex: 1 0 auto;
+    font-family: 'Poppins', sans-serif;
+}

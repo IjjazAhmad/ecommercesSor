@@ -1,0 +1,10 @@
+.adds .bg-img {
+  background-image: url("../Assets/images/add/add.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 417px;
+  padding: 20px;
+  border-radius: 20px;
+}

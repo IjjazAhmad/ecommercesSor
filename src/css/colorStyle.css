@@ -1,0 +1,24 @@
+.lightBlack {
+  color: #292d32 !important;
+}
+.bg-warning {
+  background: #eda415 !important;
+}
+.text-warning {
+  color: #eda415 !important;
+}
+.bg-primary {
+  background: #003f62 !important;
+}
+.text-primary {
+  color: #003f62 !important;
+}
+.bg-gray {
+  background: #f4f4f4 !important;
+}
+.text-gray {
+  color: #f4f4f4 !important;
+}
+.bg-footer{
+  background-color: #E2F4FF;
+}

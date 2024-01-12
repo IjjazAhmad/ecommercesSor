@@ -3,18 +3,26 @@ import React from 'react'
 export default function TopBar() {
   return (
     <>
-      <header class="bg-white">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div class="flex lg:flex-1">
-            <p>Need help? Call us: (+98) 0234 456 789</p>
-          </div>
-        
-          <div class="lg:flex lg:flex-1 lg:justify-end">
-            <p>Our store</p>
-          </div>
-        </nav>
-       
-      </header>
+      <div className="bg-white">
+        <div className="container">
+          <nav className="text-center lightBlack md:flex items-center justify-between py-4">
+            <div>
+              <p>Need help? Call us: (+98) 0234 456 789</p>
+            </div>
+            <div className="flex justify-center">
+              <div className="flex items-center mx-2">
+                <i className="fa fa-location-dot me-3 lightBlack"></i>
+                <p>Our store</p>
+              </div>
+              <div className="flex items-center mx-2">
+                <i className="fa fa-truck-fast me-3 lightBlack"></i>
+                <p>Track your order</p>
+              </div>
+            </div>
+          </nav>
+
+        </div>
+      </div>
 
     </>
   )
