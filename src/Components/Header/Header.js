@@ -28,24 +28,24 @@ export default function Header() {
                   <i>
                     <i class="fa-regular fa-user text-sm me-2 mx-6"></i>
                   </i>
-                  <i>
-                    <span className='uppercase hidden md:block'>User</span>
-                  </i>
+
+                  <span className='hidden md:block'>User</span>
+
                 </span>
                 <span className='flex text-white items-center font-sans mx-6'>
                   <i>
                     <i class="fa-regular fa-heart text-sm me-8"></i>
                   </i>
-                  <i>
-                    <span className='uppercase hidden md:block'>Sign In</span>
-                  </i>
+
+                  <span className='hidden md:block'>Sign In</span>
+
                 </span>
                 <span className='flex text-white items-center font-sans mx-6'>
                   <i>
                     <i class="fa-solid fa-cart-shopping text-sm me-2"></i>
                   </i>
                   <i>
-                    <span className='uppercase hidden md:block'>CART</span>
+                    <span className='hidden md:block'>Cart</span>
                   </i>
                 </span>
               </div>
