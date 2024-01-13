@@ -1,0 +1,36 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+/* .swiper{
+    overflow: hidden !important;
+    overflow-x: hidden;
+} */
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  color: #7a7a7a !important;
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  color: #7a7a7a !important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  background-color: #cfcece;
+  border-radius: 200px;
+  padding: 10px;
+  font-size: 10px !important;
+}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -40px !important; 
+   
+}
+.swiper-pagination-bullet{
+    z-index: 999;
+    width: 15px !important;
+    height: 15px !important;
+    background: transparent !important;
+    border: 2px solid black;
+}
+.swiper-pagination-bullet-active {
+  background: #eda415 !important;
+  border: none;
+}

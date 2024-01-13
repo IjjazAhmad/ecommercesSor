@@ -5,12 +5,14 @@
 @import "./css/card.css";
 @import "./css/footer.css";
 @import "./css/adds.css";
+@import "./css/swiper.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .container {
-  padding: 0 10px;
+  padding: 0 8px;
   width: 100%;
 }
 @media (min-width: 640px) {
