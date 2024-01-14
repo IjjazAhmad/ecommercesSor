@@ -12,7 +12,7 @@ export default function Header() {
                 <div className="logo">
                   <img src={logo} className='w-8/12 sm:w-auto ' alt="logo" />
                 </div>
-                <div className="hidden md:block">
+                <div className="hidden md-2:block">
                   <form className="flex items-center search ms-8">
                     <div>
                       <input type='text' className="outline-none rounded-s-xl w-72 p-2 px-3 text-gray-900 placeholder:text-gray-400" placeholder='Search any things' />
@@ -34,7 +34,7 @@ export default function Header() {
                 </span>
                 <span className='flex text-white items-center font-sans mx-6'>
                   <i>
-                    <i class="fa-regular fa-heart text-sm me-8"></i>
+                    <i class="fa-regular fa-heart text-sm me-2"></i>
                   </i>
 
                   <span className='hidden md:block'>Sign In</span>

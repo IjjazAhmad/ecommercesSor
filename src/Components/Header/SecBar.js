@@ -7,39 +7,36 @@ export default function SecBar() {
     const [Isopenhome, setIsopenhome] = useState(false)
     return (
         <>
-            <div className="bg-gray">
-                <div className="container">
-                    <header>
-                        <nav className="mx-auto text-center md:flex max-w-7xl items-center justify-between p-5 md:p-0">
-                            <div className="browsercat">
-                                <Link className='bg-warning text-white p-5' onClick={(prev) => setIsopen(!prev)}>Browse categories
-                                    {Isopen ? <i className="fa-solid fa-angle-up ms-4"></i> : <i className="fa-solid fa-angle-down ms-4"></i>}
+           
+                <div className="bg-gray">
+                    <header className='container'>
+                        <nav className="mx-auto text-center md:flex items-center justify-between">
+                                <Link to={'/shop'} className='bg-warning text-white p-4'>Browse categories <i className="fa-solid fa-angle-down ms-4"></i>
                                 </Link>
-                            </div>
-                            <div className="menu hidden md:block py-[20px]">
-                                <ul className='md:flex items-center'>
-                                    <li className='mx-1 sm:mx-1 md:mx-2 lg:mx-3'>
+                            <div className="menu hidden md-2:block">
+                                <ul className='flex items-center'>
+                                    <li className='mx-3'>
                                         <Link to={'/'} onClick={(prev) => setIsopenhome(!prev)}>
                                             Home
                                             {Isopenhome ? <i className="fa-solid fa-angle-up ms-4"></i> : <i className="fa-solid fa-angle-down ms-4"></i>}
                                         </Link>
                                     </li>
-                                    <li className='mx-1 sm:mx-1 md:mx-2 lg:mx-3'>
+                                    <li className='mx-3'>
                                         <Link to={'/catalog'} onClick={(prev) => setIsopenhome(!prev)}>
                                             Catalog
                                             {Isopenhome ? <i className="fa-solid fa-angle-up ms-4"></i> : <i className="fa-solid fa-angle-down ms-4"></i>}
                                         </Link>
                                     </li>
-                                    <li className='mx-1 sm:mx-1 md:mx-2 lg:mx-3'>
+                                    <li className='mx-3'>
                                         <Link to={'/productdetail'}>Blog</Link>
                                     </li>
-                                    <li className='mx-1 sm:mx-1 md:mx-2 lg:mx-3'>
-                                        <Link to={'/pages'} onClick={(prev) => setIsopenhome(!prev)}>
+                                    <li className='mx-3'>
+                                        <Link to={'/shop'} onClick={(prev) => setIsopenhome(!prev)}>
                                             Pages
                                             {Isopenhome ? <i className="fa-solid fa-angle-up ms-4"></i> : <i className="fa-solid fa-angle-down ms-4"></i>}
                                         </Link>
                                     </li>
-                                    <li className='mx-1 sm:mx-1 md:mx-2 lg:mx-3'>
+                                    <li className='mx-3'>
                                         <Link to={'/about'}>
                                             About us
                                         </Link>
@@ -52,7 +49,7 @@ export default function SecBar() {
                         </nav>
                     </header>
                 </div>
-            </div >
+          
         </>
     )
 }
