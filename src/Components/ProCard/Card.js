@@ -1,21 +1,21 @@
 import React from 'react';
-import logo from "../../Assets/images/Product/headphone.png";
-// import "./Card.css"; // Import the CSS file where you'll define the styles
+import { Link, useParams } from 'react-router-dom';
 
-export default function Card() {
+export default function Card({ Name, img, Price, id }) {
+  const { uid } = useParams
   return (
     <>
       <div className="card">
-        <div className="border-2 border-gray-300 rounded-3xl p-3 px-5 relative cardmain">
+        <div className="border-2 border-gray-300 rounded-3xl p-3 px-5 min-w-[100%]  sm:min-w-[280px]  md:min-w-[300px] lg:min-w-[330px] relative cardmain sm:mx-2">
           <div className="image">
             <span className='overlay-bg absolute right-4 top-4 lg:right-7 lg:top-5 p-2 text-center text-white w-8 h-8 flex items-center rounded-full'>
               <i className="fa-regular fa-heart text-sm me-8"></i>
             </span>
-            <img src={logo} alt="Product" />
+            <img src={img} alt="Product" className='h-[200px] w-[200px] mx-auto' />
           </div>
           <div className="content">
-            <h3 className='mb-3 text-xl font-semibold text-primary'>Play Game</h3>
-            <p className='text-l font-semibold text-primary'>$11.5</p>
+            <h3 className='mb-3 text-xl font-semibold text-primary'>{Name}</h3>
+            <p className='text-l font-semibold text-primary'>${Price}</p>
             <div className="star-icon flex mt-2">
               <i className="fa-solid fa-star text-gray-300"></i>
               <i className="fa-solid fa-star text-gray-300 ms-1"></i>
@@ -34,9 +34,9 @@ export default function Card() {
                   </div>
                 </div>
               </div>
-              <div className="overlay-bg flex items-center justify-center text-xl p-2 text-center rounded-2xl">
+              <Link to={`/productdetail/${id}`} className="overlay-bg flex items-center justify-center text-xl p-2 text-center rounded-2xl">
                 <i className="fa-solid fa-eye"></i>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

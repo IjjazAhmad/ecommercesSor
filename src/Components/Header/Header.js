@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../Assets/images/header/logo.png'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -25,29 +26,29 @@ export default function Header() {
               </div>
               <div className='flex'>
                 <span className='flex text-white items-center font-sans '>
-                  <i>
+                  <div>
                     <i class="fa-regular fa-user text-sm me-2 mx-6"></i>
-                  </i>
-
+                  </div>
                   <span className='hidden md:block'>User</span>
-
                 </span>
                 <span className='flex text-white items-center font-sans mx-6'>
-                  <i>
+                  <div className='flex'>
                     <i class="fa-regular fa-heart text-sm me-2"></i>
-                  </i>
-
+                    <span className="inline-flex items-center rounded-full bg-warning px-2 py-[2px] text-xs font-medium text-white ring-1 ring-inset ring-gray-500/10 me-2">
+                      0
+                    </span>
+                  </div>
                   <span className='hidden md:block'>Sign In</span>
-
                 </span>
-                <span className='flex text-white items-center font-sans mx-6'>
-                  <i>
+                <Link to='/cart' className='flex text-white items-center font-sans mx-6'>
+                  <div className='flex'>
                     <i class="fa-solid fa-cart-shopping text-sm me-2"></i>
-                  </i>
-                  <i>
-                    <span className='hidden md:block'>Cart</span>
-                  </i>
-                </span>
+                    <span className="inline-flex items-center rounded-full bg-warning px-2 py-[2px] text-xs font-medium text-white ring-1 ring-inset ring-gray-500/10 me-2">
+                      0
+                    </span>
+                  </div>
+                  <span className='hidden md:block'>Cart</span>
+                </Link>
               </div>
             </div>
           </header>

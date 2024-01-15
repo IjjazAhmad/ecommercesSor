@@ -1,20 +1,33 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SingleTopBar from '../../../Components/SingleTopBar'
 import logo2 from '../../../Assets/images/Product/headphone1.png'
 import logo3 from '../../../Assets/images/Product/headphone2.png'
 import ProCard from '../../../Components/ProCard'
+import { useDispatch, useSelector } from 'react-redux'
+import { FetchProduct } from '../../Redux/Sclice/ProductSclice'
 
 export default function SingleProduct() {
   const [Path, SetPath] = useState(logo3)
   const [amount, setAmount] = useState(1)
-
-
+  const state = useSelector((state) => state)
+  const [Products, SetProduct] = useState([])
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(FetchProduct());
+    SetProduct(state.redux.products)
+  }, [])
+  
+  
+  
   const setDecrease = () => {
     amount > 1 ? setAmount(amount - 1) : setAmount(1)
   }
+
   const setIncrease = () => {
     setAmount(amount + 1)
   }
+
+  const ShopProducts = Products.slice(0, 4);
   return (
     <>
       <SingleTopBar title="Play Game" />
@@ -120,19 +133,15 @@ export default function SingleProduct() {
           </div>
         </div>
         <h1 className="text-primary text-3xl font-semibold mb-5 mt-10">Related Product</h1>
-        <div className="flex my-10 flex-wrap">
-          <div className='mb-3 mx-auto'>
-            <ProCard />
-          </div>
-          <div className='mb-3 mx-auto'>
-            <ProCard />
-          </div>
-          <div className='mb-3 mx-auto'>
-            <ProCard />
-          </div>
-          <div className='mb-3 mx-auto'>
-            <ProCard />
-          </div>
+        <div className="flex flex-wrap mb-6 justify-center">
+          {ShopProducts.map((product, i) => {
+            let title = product.title.slice(0, 15)
+            return (
+              <div key={i} className='mb-3'>
+                <ProCard Name={title} Price={product.price} img={product.image} />
+              </div>
+            )
+          })}
         </div>
       </div>
     </>

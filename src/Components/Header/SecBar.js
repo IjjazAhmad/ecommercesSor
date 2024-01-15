@@ -10,30 +10,30 @@ export default function SecBar() {
            
                 <div className="bg-gray">
                     <header className='container'>
-                        <nav className="mx-auto text-center md:flex items-center justify-between">
-                                <Link to={'/shop'} className='bg-warning text-white p-4'>Browse categories <i className="fa-solid fa-angle-down ms-4"></i>
+                        <nav className="mx-auto text-center py-3 sm:py-0 md:flex items-center justify-between">
+                                <Link to={'/shop'} className='bg-warning text-white p-3 sm:p-4'>Browse categories <i className="fa-solid fa-angle-down ms-4"></i>
                                 </Link>
                             <div className="menu hidden md-2:block">
                                 <ul className='flex items-center'>
                                     <li className='mx-3'>
-                                        <Link to={'/'} onClick={(prev) => setIsopenhome(!prev)}>
+                                        <Link to={'/'}>
                                             Home
-                                            {Isopenhome ? <i className="fa-solid fa-angle-up ms-4"></i> : <i className="fa-solid fa-angle-down ms-4"></i>}
+                                             <i className="fa-solid fa-angle-down ms-4"></i>
                                         </Link>
                                     </li>
                                     <li className='mx-3'>
-                                        <Link to={'/catalog'} onClick={(prev) => setIsopenhome(!prev)}>
+                                        <Link to={'/catalog'}>
                                             Catalog
-                                            {Isopenhome ? <i className="fa-solid fa-angle-up ms-4"></i> : <i className="fa-solid fa-angle-down ms-4"></i>}
+                                             <i className="fa-solid fa-angle-down ms-4"></i>
                                         </Link>
                                     </li>
                                     <li className='mx-3'>
                                         <Link to={'/productdetail'}>Blog</Link>
                                     </li>
                                     <li className='mx-3'>
-                                        <Link to={'/shop'} onClick={(prev) => setIsopenhome(!prev)}>
-                                            Pages
-                                            {Isopenhome ? <i className="fa-solid fa-angle-up ms-4"></i> : <i className="fa-solid fa-angle-down ms-4"></i>}
+                                        <Link to={'/shop'}>
+                                            Shop
+                                            <i className="fa-solid fa-angle-down ms-4"></i>
                                         </Link>
                                     </li>
                                     <li className='mx-3'>
@@ -44,7 +44,7 @@ export default function SecBar() {
                                 </ul>
                             </div>
                             <div className="menu">
-                                <p className='text-primary font-bold mt-8 md:mt-0'>30 Days Free Return</p>
+                                <p className='text-primary font-bold mt-5 md:mt-0'>30 Days Free Return</p>
                             </div>
                         </nav>
                     </header>
