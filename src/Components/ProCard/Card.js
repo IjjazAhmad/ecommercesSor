@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Card({ Name, img, Price, id }) {
-  const { uid } = useParams
+  
   return (
     <>
       <div className="card">
@@ -14,7 +14,7 @@ export default function Card({ Name, img, Price, id }) {
             <img src={img} alt="Product" className='h-[200px] w-[200px] mx-auto' />
           </div>
           <div className="content">
-            <h3 className='mb-3 text-xl font-semibold text-primary'>{Name}</h3>
+            <h3 className='mb-3 text-xl font-semibold text-primary'>{Name}...</h3>
             <p className='text-l font-semibold text-primary'>${Price}</p>
             <div className="star-icon flex mt-2">
               <i className="fa-solid fa-star text-gray-300"></i>
@@ -34,7 +34,7 @@ export default function Card({ Name, img, Price, id }) {
                   </div>
                 </div>
               </div>
-              <Link to={`/productdetail/${id}`} className="overlay-bg flex items-center justify-center text-xl p-2 text-center rounded-2xl">
+              <Link to={`/singleproduct/${id}`} className="overlay-bg flex items-center justify-center text-xl p-2 text-center rounded-2xl">
                 <i className="fa-solid fa-eye"></i>
               </Link>
             </div>

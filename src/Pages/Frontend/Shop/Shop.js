@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ProCard from '../../../Components/ProCard/Card'
 import AddSection from '../../../Components/AddSection'
 import { useDispatch, useSelector } from 'react-redux'
-import { FetchProduct, selectedCategory } from '../../Redux/Sclice/ProductSclice'
+import { FetchProduct } from '../../Redux/Sclice/ProductSclice'
 
 export default function Shop() {
 
@@ -10,9 +10,7 @@ export default function Shop() {
 
   const [Products, SetProduct] = useState([])
 
-  const selectedCategory = useSelector((state) => state.products.selectedCategory);
-
-  const [categories, Setcategories] = useState([])
+  // const [categories, Setcategories] = useState([])
 
   const dispatch = useDispatch();
 
@@ -21,21 +19,11 @@ export default function Shop() {
   useEffect(() => {
 
     dispatch(FetchProduct());
-
     SetProduct(state.redux.products)
 
-    Setcategories(state.redux.categories)
+    // Setcategories(state.redux.categories)
 
   }, [])
-
-  const handleCategoryChange = (category) => {
-
-    if (category) {
-      return Products.filter((product) => product.category === category);
-    }
-    dispatch(selectCategory(category));
-
-  };
 
   const ShopProducts = Products.slice(0, 12);
 
@@ -50,18 +38,7 @@ export default function Shop() {
               <p>Reset</p>
             </div>
             <div className="my-3">
-              {categories.map((category) => (
-                <div key={category}>
-                  <input
-                    type="radio"
-                    id={category}
-                    value={category}
-
-                  />
-                  <label htmlFor={category}>{category}</label>
-                </div>
-              ))}
-              {categories.map((category, i) => {
+              {/* {categories.map((category, i) => {
                 return (
                   <div key={i} className="flex justify-between my-3">
                     <p>
@@ -69,15 +46,14 @@ export default function Shop() {
                         type="radio"
                         id={category}
                         value={category}
-                        checked={selectedCategory === category}
-                        onChange={() => handleCategoryChange(category)}
+                        checked={state.redux.selectedCategory === category}
                       />
                       <span className='ms-2'>{category}</span>
                     </p>
                     <p>10</p>
                   </div>
                 )
-              })}
+              })} */}
 
             </div>
             <hr />
@@ -164,7 +140,7 @@ export default function Shop() {
           <div className="w-[100%] sm:w-[50%] md:w-[70%] lg:w-[80%] py-7">
             <div className="flex flex-wrap mb-6 justify-center">
               {ShopProducts.map((product, i) => {
-                let title = product.title.slice(0, 15)
+                let title = product.title.slice(0, 20)
                 return (
                   <div key={i} className='mb-3'>
                     <ProCard Name={title} Price={product.price} img={product.image} id={product.id} />

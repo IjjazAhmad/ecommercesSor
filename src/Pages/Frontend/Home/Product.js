@@ -20,10 +20,10 @@ export default function Product() {
                 </div>
                 <div className="flex mt-10 flex-wrap mb-6 justify-center">
                     {eightProducts.map((product, i) => {
-                        let title = product.title.slice(0, 15)
+                       let title = product.title.slice(0, 20)
                         return (
                             <div key={i} className='mb-3'>
-                                <ProCard Name={title} Price={product.price} img={product.image} />
+                                <ProCard Name={title} Price={product.price} img={product.image} id={product.id} />
                             </div>
                         )
                     })}
