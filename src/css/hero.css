@@ -1,0 +1,34 @@
+.hero .swiper-pagination-bullets, .hero .swiper-pagination-bullets.swiper-pagination-horizontal {
+ 
+    bottom: 87px !important;
+    left: -362px    !important;
+   
+  }
+  @media screen and (max-width : 1440px) {
+    .hero .swiper-pagination-bullets, .hero  .swiper-pagination-bullets.swiper-pagination-horizontal {
+   
+      bottom: 87px !important;
+      left: -350px  !important;
+     
+    }
+    
+  }
+  @media screen and (max-width : 1024px) {
+    .hero .swiper-pagination-bullets, .hero  .swiper-pagination-bullets.swiper-pagination-horizontal {
+   
+      bottom: 87px !important;
+      left: -245px  !important;
+     
+    }
+    
+  }
+  @media screen and (max-width : 768px) {
+    .hero .swiper-pagination-bullets, .hero .swiper-pagination-bullets.swiper-pagination-horizontal {
+   
+      bottom: 87px !important;
+      left: -184px    !important;
+     
+    }
+    
+  }
+  

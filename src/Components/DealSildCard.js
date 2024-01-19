@@ -3,10 +3,10 @@ import logo from '../Assets/images/Product/headphone.png'
 export default function DealSildCard() {
     return (
         <>
-            <div className="card">
-                <div className="border-2 border-gray-300 rounded-3xl px-5 py-7 relative flex flex-wrap">
-                    <div className="image">
-                        <img src={logo} alt="Product" className='w-full' />
+            <div className="card ">
+                <div className="border-2 border-gray-300 rounded-3xl  flex justify-around  py-10 px-2">
+                    <div >
+                        <img src={logo} alt="Product" className='w-50' />
                     </div>
                     <div className="content">
                         <h3 className='mb-3 text-xl font-semibold text-primary'>Play Game</h3>

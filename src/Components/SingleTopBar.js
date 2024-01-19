@@ -7,7 +7,7 @@ export default function SingleTopBar({ title }) {
             <div className="bg-gray-50">
                 <div className="container">
                     <div className="py-3">
-                        <p className="flex items-center"><Link to={'/'}>Home</Link><i class="fa-solid fa-angle-right mx-3"></i>{title}</p>
+                        <p className="flex items-center"><Link to={'/'}>Home</Link><i className="fa-solid fa-angle-right mx-3"></i>{title}</p>
                     </div>
                 </div>
             </div>

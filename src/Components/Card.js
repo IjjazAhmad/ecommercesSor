@@ -5,9 +5,9 @@ export default function Card() {
   return (
     <>
       <div className="card">
-        <div className="border-2 border-gray-300 rounded-3xl py-3 mb-3 px-5 relative cardmain flex items-center">
+        <div className="border-2 border-gray-300 rounded-3xl  mb-3 relative cardmain flex items-center pe-2 pb-2">
           <div className="image">
-            <img src={logo} alt="Product" />
+            <img src={logo} alt="Product" className="w-64" />
           </div>
           <div className="content-1">
             <h3 className='mb-3 text-xl font-semibold text-primary'>Play Game</h3>

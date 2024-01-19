@@ -1,8 +1,10 @@
 import React from 'react'
 import logo from '../../Assets/images/header/logo.png'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 export default function Header() {
+  const cart = useSelector((state) => state.cart.cart)
   return (
     <>
       <div className="bg-primary">
@@ -27,13 +29,13 @@ export default function Header() {
               <div className='flex'>
                 <span className='flex text-white items-center font-sans '>
                   <div>
-                    <i class="fa-regular fa-user text-sm me-2 mx-6"></i>
+                    <i className="fa-regular fa-user text-sm me-2 mx-6"></i>
                   </div>
                   <span className='hidden md:block'>User</span>
                 </span>
                 <span className='flex text-white items-center font-sans mx-6'>
                   <div className='flex'>
-                    <i class="fa-regular fa-heart text-sm me-2"></i>
+                    <i className="fa-regular fa-heart text-sm me-2"></i>
                     <span className="inline-flex items-center rounded-full bg-warning px-2 py-[2px] text-xs font-medium text-white ring-1 ring-inset ring-gray-500/10 me-2">
                       0
                     </span>
@@ -42,9 +44,9 @@ export default function Header() {
                 </span>
                 <Link to='/cart' className='flex text-white items-center font-sans mx-6'>
                   <div className='flex'>
-                    <i class="fa-solid fa-cart-shopping text-sm me-2"></i>
+                    <i className="fa-solid fa-cart-shopping text-sm me-2"></i>
                     <span className="inline-flex items-center rounded-full bg-warning px-2 py-[2px] text-xs font-medium text-white ring-1 ring-inset ring-gray-500/10 me-2">
-                      0
+                      {cart.length}
                     </span>
                   </div>
                   <span className='hidden md:block'>Cart</span>

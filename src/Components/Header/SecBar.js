@@ -10,7 +10,7 @@ export default function SecBar() {
 
             <div className="bg-gray">
                 <header className='container'>
-                    <nav className="mx-auto text-center py-3 sm:py-0 md:flex items-center justify-between">
+                    <nav className="mx-auto mt-6 md:mt-0 text-center py-3 sm:py-0 md:flex items-center justify-between">
                         <Link to={'/shop'} className='bg-warning text-white p-3 sm:p-4'>Browse categories <i className="fa-solid fa-angle-down ms-4"></i>
                         </Link>
                         <div className="menu hidden md-2:block">

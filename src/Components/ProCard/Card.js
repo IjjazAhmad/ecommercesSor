@@ -1,8 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { addproduct } from '../../Pages/Redux/Sclice/cartSlice';
+import { useDispatch } from 'react-redux';
 
-export default function Card({ Name, img, Price, id }) {
-  
+export default function Card({ Name, img, Price, id, product }) {
+
+  const dispatch = useDispatch()
+
+  const handleAddToCart = () => {
+    let CartProduct;
+    CartProduct = {
+      name: Name,
+      id: id,
+      price: Price,
+      max: product.rating.count,
+      image: img,
+      amounts: 1,
+    }
+    dispatch(addproduct(CartProduct));
+    console.log("🚀 ~ handleAddToCart ~ CartProduct:", CartProduct)
+  };
+
   return (
     <>
       <div className="card">
@@ -27,12 +45,12 @@ export default function Card({ Name, img, Price, id }) {
           <div className="overlay text-white">
             <div className="grid grid-cols-3 gap-4">
               <div className="col-span-2 overlay-bg p-2 rounded-2xl">
-                <div className="flex justify-between items-center text-center">
-                  <p className='font-medium ms-1 md:ms-2 text-center'>Add To Cart</p>
+                <button className="flex justify-between items-center text-center cursor-pointer">
+                  <p className='font-medium ms-1 md:ms-2 text-center' onClick={handleAddToCart}>Add To Cart</p>
                   <div className="bg-warning p-2 py-1 text-center ms-3 md:ms-7 rounded-full">
                     <i className="fa-solid fa-cart-shopping"></i>
                   </div>
-                </div>
+                </button>
               </div>
               <Link to={`/singleproduct/${id}`} className="overlay-bg flex items-center justify-center text-xl p-2 text-center rounded-2xl">
                 <i className="fa-solid fa-eye"></i>

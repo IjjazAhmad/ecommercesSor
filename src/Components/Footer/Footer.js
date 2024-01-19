@@ -15,7 +15,7 @@ export default function Footer() {
                                 <input type='email' className="outline-none ps-3 py-2 bg-warning rounded-s-xl text-white" placeholder='Email address' />
                             </div>
                             <div>
-                                <button className="rounded-e-xl bg-warning pe-3 py-2  font-semibold text-white "><i class="fa-regular fa-paper-plane"></i></button>
+                                <button className="rounded-e-xl bg-warning pe-3 py-2  font-semibold text-white "><i className="fa-regular fa-paper-plane"></i></button>
                             </div>
                         </form>
                         <div className="flex justify-center text-center">
@@ -30,9 +30,9 @@ export default function Footer() {
                             <p className='text-primary mb-3 font-medium'>64 st james boulevard <br />
                                 hoswick , ze2 7zj</p>
                             <div className="flex border-t-2 border-slate-950 p-2">
-                                <i class="fa-brands fa-google text-gary-500 me-2 text-[20px]"></i>
-                                <i class="fa-brands fa-whatsapp text-gary-500 mx-2 text-[20px]"></i>
-                                <i class="fa-brands fa-facebook text-gary-500 mx-2 text-[20px]"></i>
+                                <i className="fa-brands fa-google text-gary-500 me-2 text-[20px]"></i>
+                                <i className="fa-brands fa-whatsapp text-gary-500 mx-2 text-[20px]"></i>
+                                <i className="fa-brands fa-facebook text-gary-500 mx-2 text-[20px]"></i>
                             </div>
                         </div>
                         <div className='mb-3'>

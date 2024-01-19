@@ -6,6 +6,7 @@
 @import "./css/footer.css";
 @import "./css/adds.css";
 @import "./css/swiper.css";
+@import "./css/hero.css";
 
 @tailwind base;
 @tailwind components;

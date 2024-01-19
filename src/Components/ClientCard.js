@@ -3,7 +3,7 @@ import React from 'react'
 export default function ClientCard({ img, title, des }) {
     return (
         <>
-            <div className="card">
+            <div className="card mb-14">
                 <div className="border-2 border-gray-300 rounded-3xl py-3 px-9 relative cardmain">
                     <div className="image flex items-center">
                         <img src={img} alt="Product" />

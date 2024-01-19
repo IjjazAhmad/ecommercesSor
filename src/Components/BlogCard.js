@@ -4,7 +4,7 @@ import logo from "../Assets/images/Product/headphone.png";
 export default function BlogCard() {
   return (
     <>
-      <div className="card">
+      <div className="card mb-16">
         <div className="border-2  border-gray-300 rounded-3xl flex flex-wrap items-center">
           <div className="image">
             <img src={logo} alt="Product" />

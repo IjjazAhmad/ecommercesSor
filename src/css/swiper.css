@@ -19,10 +19,9 @@
   padding: 10px;
   font-size: 10px !important;
 }
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: -40px !important; 
-   
-}
+
+
+
 .swiper-pagination-bullet{
     z-index: 999;
     width: 15px !important;
@@ -34,3 +33,21 @@
   background: #eda415 !important;
   border: none;
 }
+
+@media screen and (max-width : 668px) {
+   .swiper-button-prev,
+ .swiper-button-next {
+  display: none !important;
+}
+ .swiper-pagination{
+    display: none !important;
+  }
+  .showpagination .swiper-pagination{
+    display: block !important;
+  }
+  
+}
+
+
+
+

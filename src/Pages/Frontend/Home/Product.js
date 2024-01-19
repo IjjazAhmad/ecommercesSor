@@ -10,7 +10,7 @@ export default function Product() {
     useEffect(() => {
         dispatch(FetchProduct());
         SetProduct(state.redux.products)
-    }, [])
+    }, [dispatch])
     const eightProducts = Products.slice(5, 13);
     return (
         <>
@@ -23,7 +23,7 @@ export default function Product() {
                        let title = product.title.slice(0, 20)
                         return (
                             <div key={i} className='mb-3'>
-                                <ProCard Name={title} Price={product.price} img={product.image} id={product.id} />
+                                <ProCard Name={title} Price={product.price} img={product.image} id={product.id} product={product} />
                             </div>
                         )
                     })}

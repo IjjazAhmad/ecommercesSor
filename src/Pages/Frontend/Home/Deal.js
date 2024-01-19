@@ -29,23 +29,40 @@ export default function Deal() {
     return (
         <>
             <div className="container">
-                <div className="hidden lg:block my-10">
-                    <div className="md:flex">
-                        <div className="w-[100%] md:w-[70%] lg:w-[60%] mx-auto">
-                            <DealSildCard />
+                <div className="hidden md:block my-5">
+                    <div className="flex flex-wrap gap-7">
+                        <div className='flex-auto w-72'>
+                          
+                            <Swiper
+                    
+                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    spaceBetween={20}
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    // onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log('slide change')}
+                   
+                >
+                    <SwiperSlide>   <DealSildCard /></SwiperSlide>
+                    <SwiperSlide>   <DealSildCard /></SwiperSlide>
+                    <SwiperSlide>   <DealSildCard /></SwiperSlide>
+                    
+                  
+                    
+                </Swiper>
                         </div>
 
-                        <div className='w-[100%] md:w-[50%] lg:w-[35%] mx-auto' >
-                            <div>
+                        <div className='flex-auto w-16 '>
+                            <div className='min-h-2/5'>
                                 <Card />
                             </div>
-                            <div>
+                            <div className='min-h-2/5'>
                                 <Card />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="bg-footer p-6 rounded-lg my-10 ">
+                <div className="bg-footer p-6 rounded-lg">
                     <div className="flex flex-wrap items-center justify-between ">
                             <DealCard title={'Free delivery'} img={img} des={'on order above $50,00'} />
                             <DealCard title={'1 year warranty'} img={img2} des={'Avaliable warranty'} />
@@ -86,19 +103,9 @@ export default function Deal() {
                   
                     
                 </Swiper>
-                    {/* <div className="flex flex-wrap items-center justify-around">
-                        <div className='mb-4'>
-                            <ClientCard title={'Savannah Nguyen'} img={client1} />
-                        </div>
-                        <div className='mb-4'>
-                            <ClientCard title={'Esther Howard'} img={client2} />
-                        </div>
-                        <div className='mb-4'>
-                            <ClientCard title={'Esther Howard'} img={client3} />
-                        </div>
-                    </div> */}
+                   
                 </div>
-                <div className="bg-footer  py-6 rounded-lg my-10">
+                <div className="bg-footer  py-6 rounded-lg ">
                     <div className="flex flex-wrap gap-5 items-center justify-evenly">
                         <img src={logo1} className="w-40 md:w-[115px]" />
                         <img src={logo2} className="w-40 md:w-[115px]" />
@@ -108,14 +115,36 @@ export default function Deal() {
                     </div>
                 </div>
                 <div>
-                    <div className="flex flex-wrap">
-                        <div className='mx-auto mb-3'>
-                            <BlogCard />
-                        </div>
-                        <div className='mx-auto mb-3'>
-                            <BlogCard />
-                        </div>
-                    </div>
+                <Swiper
+                    className='showpagination my-5'
+                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    spaceBetween={20}
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    // onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log('slide change')}
+                    breakpoints={{
+                        
+                        576: {
+                            slidesPerView: 1,
+                        },
+                      
+                        768: {
+                            slidesPerView: 1,
+                        },
+                       
+                        992: {
+                            slidesPerView: 2,
+                        },
+                    }}
+                >
+                    <SwiperSlide> <BlogCard /></SwiperSlide>
+                    <SwiperSlide> <BlogCard /></SwiperSlide>
+                    <SwiperSlide> <BlogCard /></SwiperSlide>
+                    <SwiperSlide> <BlogCard /></SwiperSlide>
+                    <SwiperSlide> <BlogCard /></SwiperSlide>
+                </Swiper>
+                   
                 </div>
             </div>
         </>
