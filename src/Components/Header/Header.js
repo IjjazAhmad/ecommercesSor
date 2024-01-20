@@ -1,10 +1,8 @@
 import React from 'react'
 import logo from '../../Assets/images/header/logo.png'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
 
 export default function Header() {
-  const cart = useSelector((state) => state.cart.cart)
   return (
     <>
       <div className="bg-primary">
